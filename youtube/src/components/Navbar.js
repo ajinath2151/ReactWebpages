@@ -8,6 +8,7 @@ import ajinathImg from '../images/AjinathShinde.jpg'
 import { useState } from "react";
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
 import Slider from '@material-ui/core/Slider';
+import '../index.css';
 const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
@@ -107,7 +108,7 @@ const Navbar = () => {
           
           
 
-          <AvatarGroup max={2} spacing={5} >
+          <AvatarGroup max={2} spacing={5} className={classes.AvatarGroup} >
           <Avatar alt="ajinath image" src={ajinathImg} className={classes.avatar} />
           <Avatar alt="shambhuraje image" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr7CkPM1h5gj-6DJqeSZ9zLk81X2U3ZauCrQ&usqp=CAU"} className={classes.avatar} />
           <Avatar alt="shambhuraje image" src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr7CkPM1h5gj-6DJqeSZ9zLk81X2U3ZauCrQ&usqp=CAU"} className={classes.avatar} />

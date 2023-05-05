@@ -1,0 +1,6 @@
+.MuiAvatar-root {
+    width: 30px;
+    height: 30px;
+    z-index: 0;
+    margin-left: -5px;
+}
