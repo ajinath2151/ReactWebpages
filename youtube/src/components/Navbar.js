@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   toolbar: {
     display: "flex",
     justifyContent: "space-between",
-    minHeight:"46px"
+    minHeight:"60px"
   },
   logoLarge: {
     display: "none",
