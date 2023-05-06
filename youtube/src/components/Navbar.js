@@ -7,7 +7,7 @@ import { Avatar, Badge, InputBase } from "@material-ui/core";
 import ajinathImg from '../images/AjinathShinde.jpg'
 import { useState } from "react";
 import AvatarGroup from '@material-ui/lab/AvatarGroup';
-import Slider from '@material-ui/core/Slider';
+// import Slider from '@material-ui/core/Slider';
 import '../index.css';
 const useStyles = makeStyles((theme) => ({
   toolbar: {
