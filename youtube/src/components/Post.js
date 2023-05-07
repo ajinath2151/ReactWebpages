@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     height: 250,
   },  
 }));
-
+// -----------------------------------for adding post-------------------------------------------------
 const Post = () => {
   const classes = useStyles();
   return (
