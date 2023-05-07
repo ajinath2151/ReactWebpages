@@ -7,10 +7,13 @@ const useStyles = makeStyles((theme) => ({
     color:"white",
     marginTop:theme.spacing(8),
     backgroundColor:theme.palette.primary.main,
+    position:"sticky",
+    top:65,
     [theme.breakpoints.up("sm")]: {
       backgroundColor:"white",
       color:"#555",
-      border:"2px solid #cbc6c6"
+      border:"2px solid #cbc6c6",
+      
     },
   },
   item: {

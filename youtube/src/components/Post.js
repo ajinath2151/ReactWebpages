@@ -11,13 +11,16 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   card: {
-    marginBottom:theme.spacing(5),
+    marginBottom:theme.spacing(5),    
   },
   media: {
     height: 250,
+    [theme.breakpoints.down("sm")]: {
+      height:150,
+    },
   },  
 }));
-// -----------------------------------for adding post-------------------------------------------------
+
 const Post = () => {
   const classes = useStyles();
   return (
@@ -33,6 +36,10 @@ const Post = () => {
             My First Post...
           </Typography>
           <Typography variant="body2" component="p">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
+            reprehenderit, in dolores et culpa eius voluptas explicabo
+            asperiores? Possimus illum alias aut consectetur enim, quia velit
+            saepe aliquid unde veritatis!
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
             reprehenderit, in dolores et culpa eius voluptas explicabo
             asperiores? Possimus illum alias aut consectetur enim, quia velit

@@ -15,6 +15,9 @@ const Feed = () => {
     <Container className={classes.container}>      
       <Post />
       <Post />
+      <Post />
+      <Post />
+      <Post />
     </Container>
   );
 };
