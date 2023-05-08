@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom:theme.spacing(5),    
   },
   media: {
-    height: 250,
+    height: 350,
     [theme.breakpoints.down("sm")]: {
       height:150,
     },
