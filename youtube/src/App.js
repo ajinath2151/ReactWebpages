@@ -5,8 +5,6 @@ import Feed from "./components/Feed";
 import RightBar from "./components/RightBar";
 import Add from "./components/Add";
 
-
-
 const useStyles = makeStyles((theme)=>({
   right: {
     [theme.breakpoints.down("sm")]: {
@@ -14,7 +12,6 @@ const useStyles = makeStyles((theme)=>({
     },
   },
 }))
-
 
 const App = () => {
 

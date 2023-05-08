@@ -56,6 +56,7 @@ const Post = () => {
         </Button>
       </CardActions>
     </Card>
+    
   );
 };
 
