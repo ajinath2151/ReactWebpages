@@ -1,6 +1,7 @@
 import { Button, Menu, MenuItem, Typography } from "@material-ui/core";
 import React, { useState } from "react";
 import KeyboardArrowDown from "@material-ui/icons/KeyboardArrowDown";
+import { Menu as MenuIcon } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import GirlWithBagImg from "../images/background/GirlWithBag.jpg";
 
@@ -15,22 +16,32 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
+    [theme.breakpoints.up("sm")]: {
+      marginTop:"-68px",
+    },
   },
+
   menuButtonHome: {
     marginTop: 30,
-    color:"#c7c3c3",    
+    color: "#c7c3c3",
     // marginLeft:200,
     "&:hover": {
       // backgroundColor: "red",
       color: "white",
     },
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
   menuButtonPage: {
     marginTop: 30,
-    color:"#c7c3c3",
+    color: "#c7c3c3",
     "&:hover": {
       // backgroundColor: "red",
       color: "white",
+    },
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
     },
   },
   menu: {
@@ -38,23 +49,61 @@ const useStyles = makeStyles((theme) => ({
   },
   stackText: {
     marginTop: theme.spacing(3),
-    color: "white",
+    color: "white",    
     fontSize: 30,
+    [theme.breakpoints.down("sm")]: {
+      // marginRight: 220,
+      marginTop: theme.spacing(1),
+      color: "black",
+    },
   },
   appBarDiv: {
-    marginTop:theme.spacing(3),
+    // marginTop: theme.spacing(3),
   },
   tryBuilder: {
-    color:"white",
-    borderColor:"white",
-    borderRadius:"05px",
+    color: "white",    
+    borderColor: "white",
+    borderRadius: "05px",
+    marginTop:"20px",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
   buyNow: {
-    backgroundColor:"blue",
-    color:"white",
-    marginLeft:theme.spacing(2),
-    borderRadius:"5px",
-    marginRight:theme.spacing(10),
+    backgroundColor: "blue",
+    color: "white",
+    marginLeft: theme.spacing(2),
+    borderRadius: "5px",
+    marginRight: theme.spacing(10),
+    marginTop:"20px",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
+  },
+  menuIcon: {
+    color: "white",
+    display:"none",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 0,
+      marginRight: 10,
+      color: "black",
+      display:"block",
+    },
+  },
+  appBar: {
+    [theme.breakpoints.up("sm")]: {
+      display:"flex",
+      justifyContent:"space-around"
+    },
+    [theme.breakpoints.down("sm")]: {
+      // marginTop: theme.spacing(6),
+    },
+  },
+  smallNav: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    margin: "0px 12px",
   },
 }));
 
@@ -82,7 +131,7 @@ function Navbar() {
 
   return (
     <>
-      <div className={classes.container}>
+      <div className={classes.appBar}>
         <div>
           <Button
             aria-controls="home"
@@ -182,12 +231,24 @@ function Navbar() {
             <MenuItem onClick={handlePagesClose}>Page 3</MenuItem>
           </Menu>
         </div>
-        <Typography className={classes.stackText}> <strong> stack </strong></Typography>
-        <div className={classes.appBarDiv}>
-          <Button className={classes.tryBuilder} variant="outlined"><strong> TRY BUILDER</strong></Button>
-          <Button className={classes.buyNow}><strong>BUY NOW</strong></Button>
+        <div className={classes.smallNav}>
+          <Typography className={classes.stackText}>
+            <strong> stack </strong>
+          </Typography>
+          <MenuIcon className={classes.menuIcon} />
         </div>
+        <div className={classes.appBarDiv}>
+          <Button className={classes.tryBuilder} variant="outlined">
+            <strong> TRY BUILDER</strong>
+          </Button>
+          <Button className={classes.buyNow}>
+            <strong>BUY NOW</strong>
+          </Button>
+          {/* <MenuIcon className={classes.menuIcon} /> */}
+        </div>
+
       </div>
+        <div className={classes.container}></div>
     </>
   );
 }
