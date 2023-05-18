@@ -1,7 +1,7 @@
 import { Button, Menu, MenuItem, Typography } from "@material-ui/core";
 import React, { useState } from "react";
 import KeyboardArrowDown from "@material-ui/icons/KeyboardArrowDown";
-import { Menu as MenuIcon } from "@material-ui/icons";
+import { Cancel, Menu as MenuIcon } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import GirlWithBagImg from "../images/background/GirlWithBag.jpg";
 
@@ -20,17 +20,35 @@ const useStyles = makeStyles((theme) => ({
       marginTop:"-68px",
     },
   },
-
+  menuIcon: {
+    color: "white",
+    display:"none",     
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 0,
+      marginRight: 10,
+      color: "black",
+      display: (props) => (props.open ? "none" : "flex"),      
+      // display:"flex",
+    },
+  },
+  cancel: {
+    display:"none",
+    [theme.breakpoints.down("sm")]: {
+      display: (props) => (props.open ? "flex" : "none"),       
+    },  
+  },
   menuButtonHome: {
+    [theme.breakpoints.down("sm")]: {
+      // display: (props) => (props.open ? "none" : "none"),      
+      // color:"black",
+      display:"none"
+    },                  
     marginTop: 30,
     color: "#c7c3c3",
     // marginLeft:200,
     "&:hover": {
       // backgroundColor: "red",
       color: "white",
-    },
-    [theme.breakpoints.down("sm")]: {
-      display: "none",
     },
   },
   menuButtonPage: {
@@ -61,35 +79,37 @@ const useStyles = makeStyles((theme) => ({
     // marginTop: theme.spacing(3),
   },
   tryBuilder: {
+    "&:hover": {
+      marginBottom:"5px",
+    },
     color: "white",    
     borderColor: "white",
     borderRadius: "05px",
     marginTop:"20px",
+    padding:"5px 20px",
     [theme.breakpoints.down("sm")]: {
-      display: "none",
+      color:"black",
+      borderColor:"black",
+      display: (props)=> (props.open ? "flex" : "none"),
     },
   },
   buyNow: {
-    backgroundColor: "blue",
+    backgroundColor: "#4a90e2",
     color: "white",
     marginLeft: theme.spacing(2),
     borderRadius: "5px",
     marginRight: theme.spacing(10),
     marginTop:"20px",
+    padding:"5px 20px",
     [theme.breakpoints.down("sm")]: {
       display: "none",
     },
-  },
-  menuIcon: {
-    color: "white",
-    display:"none",
-    [theme.breakpoints.down("sm")]: {
-      marginTop: 0,
-      marginRight: 10,
-      color: "black",
-      display:"block",
+    "&:hover": {
+      backgroundColor:"#84abd9",
+      marginBottom:"3px",
     },
   },
+  
   appBar: {
     [theme.breakpoints.up("sm")]: {
       display:"flex",
@@ -108,10 +128,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Navbar() {
-  const classes = useStyles();
 
   const [homeAnchorEl, setHomeAnchorEl] = useState(null);
   const [pagesAnchorEl, setPagesAnchorEl] = useState(null);
+  const [open, setOpen] = useState(false);
+  
+  const classes = useStyles({ open });
 
   const handleHomeClick = (event) => {
     setHomeAnchorEl(event.currentTarget);
@@ -123,6 +145,7 @@ function Navbar() {
 
   const handlePagesClick = (event) => {
     setPagesAnchorEl(event.currentTarget);
+    setOpen(false)
   };
 
   const handlePagesClose = () => {
@@ -235,7 +258,8 @@ function Navbar() {
           <Typography className={classes.stackText}>
             <strong> stack </strong>
           </Typography>
-          <MenuIcon className={classes.menuIcon} />
+          <MenuIcon className={classes.menuIcon} onClick={()=>setOpen(true)} />
+          <Cancel className={classes.cancel} onClick={()=>setOpen(false)} />
         </div>
         <div className={classes.appBarDiv}>
           <Button className={classes.tryBuilder} variant="outlined">
