@@ -19,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       marginTop:"-68px",
     },
+    [theme.breakpoints.down('sm')]: {
+      // height:"100vh",
+      // width:"100vw",
+
+    },
   },
   menuIcon: {
     color: "white",
