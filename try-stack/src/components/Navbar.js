@@ -277,7 +277,9 @@ function Navbar() {
         </div>
 
       </div>
-        <div className={classes.container}></div>
+        <div className={classes.container}>
+          
+        </div>
     </>
   );
 }
