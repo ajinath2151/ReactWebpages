@@ -40,9 +40,11 @@
   color: #fff;
   background: none !important;
 }
-.makeStyles-container-1 {
-  height: 320px !important;
-  background-size: 567px 400px !important;
- 
- 
+
+/* for mobile screen responsive */
+@media screen and (max-width: 480px) {
+  .makeStyles-container-1 {
+    height: 320px !important;
+    background-size: 567px 400px !important;
+  }
 }

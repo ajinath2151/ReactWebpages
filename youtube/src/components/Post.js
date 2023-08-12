@@ -8,6 +8,7 @@ import {
   Typography,
   makeStyles,
 } from "@material-ui/core";
+import postImg from '../images/img1.jpeg'
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -28,7 +29,8 @@ const Post = () => {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="https://webneel.com/daily/sites/default/files/images/daily/08-2018/1-nature-photography-spring-season-mumtazshamsee.jpg"
+          // image="https://webneel.com/daily/sites/default/files/images/daily/08-2018/1-nature-photography-spring-season-mumtazshamsee.jpg"
+          image={postImg}
           title="my post here..."
         />
         <CardContent>
