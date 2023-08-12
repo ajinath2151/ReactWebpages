@@ -1,0 +1,8 @@
+/* ajinath : here override default style of button hover  */
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root:hover {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    background-color: rgb(147, 241, 147);
+    border: 1px solid red;
+}
+/* ./ ajinath : here override default style of button hover  */
