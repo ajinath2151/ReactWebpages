@@ -13,7 +13,7 @@ const Rightbar = () => {
       <Box position={'fixed'} width={400}>
         <Typography fontWeight={100} >Online Friends</Typography>
         <AvatarGroup max={4} sx={{paddingRight: '248px'}} >
-          <Avatar 
+          <Avatar   
             alt="Rajesh Gopinathan" 
             src="https://st.adda247.com/https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2022/03/20212655/TCS-CEO-Gopinathan-COO-Subramaniam-reappointed-for-5-years.jpg" 
           />
