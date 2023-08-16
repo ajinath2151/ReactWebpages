@@ -1,4 +1,4 @@
-import { Avatar, AvatarGroup, Box, ImageList, ImageListItem, Typography } from '@mui/material'
+import { Avatar, AvatarGroup, Box, Divider, ImageList, ImageListItem, List, ListItem, ListItemAvatar, ListItemText, Typography } from '@mui/material'
 import React from 'react'
 
 const Rightbar = () => {
@@ -11,7 +11,7 @@ const Rightbar = () => {
     sx={{display:{xs:'none', sm:'block'}}}
     >
       <Box position={'fixed'} width={400}>
-        <Typography fontWeight={100} >Online Friends</Typography>
+        <Typography fontWeight={500} >Online Friends</Typography>
         <AvatarGroup max={4} sx={{paddingRight: '248px'}} >
           <Avatar   
             alt="Rajesh Gopinathan" 
@@ -38,7 +38,7 @@ const Rightbar = () => {
             src="data:image/jpeg;base64,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" 
           />                    
         </AvatarGroup>
-            <Typography fontWeight={100} mt={2} mb={2}>Latest Photos</Typography>
+            <Typography variant='h6' fontWeight={500} mt={2}>Latest Photos</Typography>
             <ImageList cols={3} rowHeight={100} gap={5}>
               <ImageListItem>
                 <img src='https://images.unsplash.com/photo-1551963831-b3b1ca40c98e' 
@@ -65,6 +65,74 @@ const Rightbar = () => {
                 alt='Basketball' />              
               </ImageListItem>
             </ImageList>
+            <Typography fontWeight={500} variant='h6' mt={2} >Latest Convertations</Typography>
+            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+      <ListItem alignItems="flex-start">
+        <ListItemAvatar>
+          <Avatar alt="Remy Sharp" src="https://media.istockphoto.com/id/958064228/photo/portrait-of-happy-young-man.webp?b=1&s=170667a&w=0&k=20&c=ywaPLXj8meNw8tmZ3rOju5nrtlmhMwrQnjpW4nlqy_s=" />
+        </ListItemAvatar>
+        <ListItemText
+          primary="Brunch this weekend?"
+          secondary={
+            <React.Fragment>
+              <Typography
+                sx={{ display: 'inline' }}
+                component="span"
+                variant="body2"
+                color="text.primary"
+              >
+                Ali Connors
+              </Typography>
+              {" — I'll be in your neighborhood doing errands this…"}
+            </React.Fragment>
+          }
+        />
+      </ListItem>
+      <Divider variant="inset" component="li" />
+      <ListItem alignItems="flex-start">
+        <ListItemAvatar>
+          <Avatar alt="Travis Howard" src="https://media.istockphoto.com/id/1293903541/photo/young-woman-stock-photo.jpg?s=612x612&w=0&k=20&c=AvQGpGDrH-0nUNAL-uHuc1uidcTiiLbovyKJjsN_mOk=" />
+        </ListItemAvatar>
+        <ListItemText
+          primary="Summer BBQ"
+          secondary={
+            <React.Fragment>
+              <Typography
+                sx={{ display: 'inline' }}
+                component="span"
+                variant="body2"
+                color="text.primary"
+              >
+                to Scott, Alex, Jennifer
+              </Typography>
+              {" — Wish I could come, but I'm out of town this…"}
+            </React.Fragment>
+          }
+        />
+      </ListItem>
+      <Divider variant="inset" component="li" />
+      <ListItem alignItems="flex-start">
+        <ListItemAvatar>
+          <Avatar alt="Cindy Baker" src="https://i.pinimg.com/originals/30/84/83/30848343aa453d27d3393a37c0f8c2a2.jpg" />
+        </ListItemAvatar>
+        <ListItemText
+          primary="Oui Oui"
+          secondary={
+            <React.Fragment>
+              <Typography
+                sx={{ display: 'inline' }}
+                component="span"
+                variant="body2"
+                color="text.primary"
+              >
+                Sandra Adams
+              </Typography>
+              {' — Do you have Paris recommendations? Have you ever…'}
+            </React.Fragment>
+          }
+        />
+      </ListItem>
+    </List>
       </Box>
     </Box>
   )
