@@ -1,6 +1,6 @@
 import React from 'react'
-import { ExpandMore, ExpandMoreOutlined, Favorite, FavoriteBorder, MoreVertOutlined, Share } from '@mui/icons-material'
-import { Avatar, Box, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, Collapse, IconButton, Typography } from '@mui/material'
+import { Favorite, FavoriteBorder, MoreVertOutlined, Share } from '@mui/icons-material'
+import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Checkbox, IconButton, Typography } from '@mui/material'
 
 
 const Post = () => {
