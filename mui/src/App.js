@@ -6,22 +6,26 @@ import Leftbar from './components/Leftbar';
 import Rightbar from './components/Rightbar';
 import Navbar from './components/Navbar';
 import Add from './components/Add';
+import SXstyleExample from './practice/SXstyleExample';
 
 function App() {
 
 
   return (
     <>
-    <Box>
-      <Navbar />
-      {/* stack is like container to manage item vertically or horizontally */}
+    
+    {/* <Box>
+      <Navbar />      
       <Stack direction={'row'} spacing={2} justifyContent={'space-between'}>        
         <Leftbar />
         <Feed />
         <Rightbar />
       </Stack>
         <Add />
-    </Box>    
+    </Box>     */}
+
+
+    <SXstyleExample />
     </>
   );  
 }
