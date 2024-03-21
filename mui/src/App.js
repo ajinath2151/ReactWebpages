@@ -7,6 +7,7 @@ import Rightbar from './components/Rightbar';
 import Navbar from './components/Navbar';
 import Add from './components/Add';
 import SXstyleExample from './practice/SXstyleExample';
+import AstyleBoxExample from './practice/AstyleBoxExample';
 
 function App() {
 
@@ -25,7 +26,8 @@ function App() {
     </Box>     */}
 
 
-    <SXstyleExample />
+    {/* <SXstyleExample /> */}
+    <AstyleBoxExample />
     </>
   );  
 }
